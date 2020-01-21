@@ -26,4 +26,7 @@ function createData(email, password, password_confirmation) {
   console.log('Data created!')
 }
 
-module.exports = createData;
+module.exports = {
+  user: createUser,
+  post: createPost
+};
