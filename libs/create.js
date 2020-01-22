@@ -15,7 +15,6 @@ var schema = {
 function isValid(data, schema) {
   for (let i in schema) {
     if (schema[i] !== typeof data[i]) {
-      console.log(`${data[i]} should have been ${schema[i]}!`);
       return false;
     }
   }
@@ -24,36 +23,36 @@ function isValid(data, schema) {
 }
 
 function createUser(data) {
-  if (!isValid(data, schema.users)) return;
+  return new Promise(function(resolve, reject) {
+    if (!isValid(data, schema.users)) return reject('Schema isn\'t valid!');
 
-  if (data.password !== data.password_confirmation) {
-    console.log("Password and its confirmation doesn't match!");
-    return;
-  }
+    if (data.password !== data.password_confirmation) {
+      reject('Password doesn\t match!');
+    }
 
-  delete data.password_confirmation;
+    delete data.password_confirmation;
 
-  let users = require('../data/users.json') || [];
-  data.id = users.length + 1;
+    let users = require('../data/users.json') || [];
+    data.id = users.length + 1;
 
-  let {
-    id, name,
-    email, password
-  } = data;
+    let {
+      id, name,
+      email, password
+    } = data;
 
-  users.push({
-    id, name, email, password
-  });
+    users.push({
+      id, name, email, password
+    });
 
-  fs.writeFileSync(
-    `./data/users.json`,
-    JSON.stringify(users, null, 2)
-  ); 
+    fs.writeFileSync(
+      `./data/users.json`,
+      JSON.stringify(users, null, 2)
+    ); 
 
-  console.log('User created!');
-  console.log('User:', {
-    id, name, email
-  });
+    resolve({
+      id, name, email
+    }); 
+  })
 }
 
 function createPost(data) {

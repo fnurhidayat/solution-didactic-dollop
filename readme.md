@@ -23,3 +23,14 @@
   body: string
 }
 ```
+
+## New Task
+
+1. Create class for User/Post
+2. That class will able to do save in the data folder.
+3. User/Post class will extend from ActiveRecord
+4. ActiveRecord should have this following methods:
+   * Create
+   * Update
+   * Read - Find By ID
+   * Delete

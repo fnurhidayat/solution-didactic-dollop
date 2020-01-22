@@ -29,7 +29,6 @@ switch(method) {
     });
     break;
 
-  /* Read User */
   case 'read_user_by_id':
     id = args.slice(1)[0];
 
@@ -82,3 +81,4 @@ switch(method) {
   default:
     console.log('Unknown operation!')
 }
+
