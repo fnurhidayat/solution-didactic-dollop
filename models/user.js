@@ -1,7 +1,9 @@
 const ActiveRecord = require('./index.js');
 
 class User extends ActiveRecord {
-  constructor() {
+  static table_name = 'users';
+
+  constructor(data) {
     super({
       table_name: 'users',
       data: {
@@ -10,8 +12,7 @@ class User extends ActiveRecord {
         password: data.password
       }
     })
-  }
-  
+  } 
 }
 
 module.exports = User;

@@ -1,26 +1,26 @@
 [
   {
     "id": 1,
-    "name": "Andy Toy Story",
-    "email": "test02@mail.com",
+    "name": "Lorem Ipsum",
+    "email": "test01@mail.com",
     "password": "123456"
   },
   {
     "id": 2,
-    "name": "Andy Toy Story",
-    "email": "test02@mail.com",
+    "name": "Lorem Ipsum",
+    "email": "test01@mail.com",
     "password": "123456"
   },
   {
     "id": 3,
-    "name": "Fikri Rahmat Nurhidayat",
-    "email": "fnurhidayat@binar.co.id",
+    "name": "Lorem Ipsum",
+    "email": "test01@mail.com",
     "password": "123456"
   },
   {
     "id": 4,
-    "name": "John Cena",
-    "email": "john.cena@mail.com",
+    "name": "Lorem Ipsum",
+    "email": "test01@mail.com",
     "password": "123456"
   }
 ]
