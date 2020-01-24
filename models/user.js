@@ -3,16 +3,19 @@ const ActiveRecord = require('./index.js');
 class User extends ActiveRecord {
   static table_name = 'users';
 
-  constructor(data) {
+  constructor({ id, name, email, password }) {
     super({
-      table_name: 'users',
-      data: {
-        name: data.name,
-        email: data.email,
-        password: data.password
-      }
+      id, name, email, password
     })
-  } 
+  }
+
+  entity() {
+    let { id, name, email } = this;
+    return {
+      id, name, email
+    }
+  }
+
 }
 
 module.exports = User;

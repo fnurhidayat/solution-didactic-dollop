@@ -1,0 +1,29 @@
+{
+  "name": "latihan-express",
+  "version": "1.0.0",
+  "description": "CRUD Basic",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fnurhidayat/solution-didactic-dollop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fnurhidayat/solution-didactic-dollop/issues"
+  },
+  "homepage": "https://github.com/fnurhidayat/solution-didactic-dollop#readme",
+  "nodemonConfig": {
+    "ignore":["./data/*"]
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
